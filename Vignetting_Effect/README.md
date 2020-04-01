@@ -1,0 +1,1 @@
+This applies a Gaussian distribution to get a Vignetting effect. You'll need OpenCV.
