@@ -7,7 +7,7 @@
 using namespace cv; //Using namespaces is not recommended for big projects
 using namespace std;
 
-void gaussVignettingGRAY(const Mat& myImage, Mat& retImage, int sigma, bool printResults) {
+void gaussVignettingGRAY(const Mat& myImage, Mat& retImage, float sigma, bool printResults) {
 	Mat testIm, grayIm; //Internal images are a gray-scaled copy of the input image
 	cvtColor(myImage, testIm, COLOR_BGR2GRAY);
     grayIm = testIm.clone();
@@ -40,5 +40,5 @@ void gaussVignettingGRAY(const Mat& myImage, Mat& retImage, int sigma, bool prin
 		imshow("edit", testIm);
 	}
     //We edit the return Image. It could be done from the beginning with retImage instead of testIm.
-    retImage=testIm.clone();	
+    retImage=testIm.clone();
 }
